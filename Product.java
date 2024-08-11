@@ -1,13 +1,10 @@
 package restAssuredTest.migrationAPI;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.sun.javafx.collections.MappingChange;
-import com.sun.xml.xsom.impl.scd.Iterators;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import org.testng.collections.Maps;
+import restAssuredTest.migrationAPI.Utils.Utils;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -268,7 +265,7 @@ public class Product extends BaseTest {
                 .statusCode(200) // Assert that the status code is 200
                 .statusLine("HTTP/1.1 200 OK") // Assert that the status line is correct
                 .extract().response(); // Extract the response
-        
+
 
         // Print product details for a specific product ID
         int productIdToValidate = 6142;
